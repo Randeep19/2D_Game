@@ -15,19 +15,34 @@ public class Projectile extends Actor
     public Projectile()
     {
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/6;
-        int myNewWidth = (int)myImage.getWidth()/6;
+        int myNewHeight = (int)myImage.getHeight()/3;
+        int myNewWidth = (int)myImage.getWidth()/3;
         myImage.scale(myNewWidth, myNewHeight);
     }
     public void act()
     {
         projectileMove();
-        
+        removeFromWorld();
     }
     public void projectileMove()
     {
-    setLocation(getX(), getY()-5;
-    
+        setLocation(getX(), getY()-5);
     }
-    
+    public void removeFromWorld()
+    {
+         Actor enemy =  getOneIntersectingObject(Enemy.class);
+        if (enemy != null)
+        {
+            getWorld().removeObject(enemy);
+            Counter counter = (Counter) getWorld().getObjects(Counter.class).get(0);
+            counter.addScore();
+            getWorld().removeObject(this);
+        } 
+           
+        else if(getY() == 0)
+        {
+            getWorld().removeObject(this);
+            
+        }
+    }
 }

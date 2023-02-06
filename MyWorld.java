@@ -1,39 +1,70 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * JESS, Randeep & Ravleen
- * witch hunt 
- * V 1.0
+ *  Game: Witch Hunt
+ * 
+ * Jess, Randeep, Randeep
+ * v 1.0
  */
 public class MyWorld extends World
 {
- 
     Counter counter = new Counter();
-
+    HealthBar healthbar = new HealthBar();
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
     public MyWorld()
     {    
-        // Create a new world with 900x600 cells with a cell size of 1x1 pixels.
         super(900, 600, 1); 
         prepare();
     }
+    public Counter getCounter()
+    {
+        return counter;
+    }
+    public void act()
+    {
+        
+        addEnemy1();
+        addEnemy2();
+    } 
     
+    public void addEnemy1()
+    {
+        if(Greenfoot.getRandomNumber(80)<1)
+        {
+        addObject(new Enemy1(), Greenfoot.getRandomNumber(900), 0);
+    }
+    }
+    public void addEnemy2()
+    {
+        if(Greenfoot.getRandomNumber(200)<1)
+        {
+        addObject(new Enemy2(), Greenfoot.getRandomNumber(900), 0);
+    }
+    }
+    public HealthBar getHealthBar()
+    {
+        return healthbar;
+    }
     /**
-     * Player added! (BY RAVLEEN)
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
      */
     private void prepare()
     {
         Player player = new Player();
-        addObject(player,203,549);
+        addObject(player,134,553);
         Enemy1 enemy1 = new Enemy1();
-        addObject(enemy1,117,50);
+        addObject(enemy1,213,109);
+
         Enemy2 enemy2 = new Enemy2();
-        addObject(enemy2,748,21);
-        player.setLocation(178,444);
-        Projectile projectile = new Projectile();
-        addObject(projectile,178,444);
+        addObject(enemy2,534,136);
+        enemy2.setLocation(544,145);
+        Counter counter = new Counter();
+        addObject(counter,70,35);
+        HealthBar healthBar = new HealthBar();
+        addObject(healthBar,824,30);
     }
 }

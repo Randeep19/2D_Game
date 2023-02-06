@@ -19,12 +19,11 @@ public class Enemy1 extends Enemy
         int myNewWidth = (int)myImage.getWidth()/5;
         myImage.scale(myNewWidth, myNewHeight);
     }
-
     public void act()
     {
-        // moving the enemy 
-        {
         moveEnemy();
-        }
+        removeEnemy();
     }
+    
+    
 }
