@@ -22,6 +22,6 @@ public class Enemy2 extends Enemy
 
     public void act()
     {
-        // Add your action code here.
+        moveEnemy();
     }
 }
