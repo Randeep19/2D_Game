@@ -14,4 +14,8 @@ public class Enemy extends Actor
     {
         // Add your action code here.
     }
+    public void moveEnemy()
+    {
+       setLocation(getX(),getY()+3);
+    }
 }
