@@ -1,8 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * JESS, Randeep & Ravleen
- * The Witch-Hunt 
+ * Name of Students - Jess, Randeep & Ravleen
+ * Name of Game - The Witch-Hunt 
  * V 1.0
  */
 public class MyWorld extends World
