@@ -22,7 +22,7 @@ public class Enemy1 extends Enemy
 
     public void act()
     {
-        // moving the enemy 1
+        // moving the enemy 
         {
         moveEnemy();
         }
