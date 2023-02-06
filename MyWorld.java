@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * JESS, Randeep & Ravleen
+ * witch hunt 
+ * V 1.0
  */
 public class MyWorld extends World
 {
@@ -15,7 +14,16 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 900x600 cells with a cell size of 1x1 pixels.
         super(900, 600, 1); 
+        prepare();
+    }
+    /**
+     * Player added! (BY RAVLEEN)
+     */
+    private void prepare()
+    {
+        Player player = new Player();
+        addObject(player,203,549);
     }
 }
