@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Name of Students - Jess, Randeep & Ravleen
+ * Name of Students - Jessica, Randeep & Ravleen
  * Name of Game - The Witch-Hunt 
  * V 1.0
  */
