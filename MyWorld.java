@@ -1,8 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Name of Students - Jessica, Randeep & Ravleen
- * Name of Game - The Witch-Hunt 
+ * JESS, Randeep & Ravleen
+ * witch hunt 
  * V 1.0
  */
 public class MyWorld extends World
@@ -18,6 +18,7 @@ public class MyWorld extends World
         super(900, 600, 1); 
         prepare();
     }
+    
     /**
      * Player added! (BY RAVLEEN)
      */
@@ -25,5 +26,9 @@ public class MyWorld extends World
     {
         Player player = new Player();
         addObject(player,203,549);
+        Enemy1 enemy1 = new Enemy1();
+        addObject(enemy1,117,50);
+        Enemy2 enemy2 = new Enemy2();
+        addObject(enemy2,748,21);
     }
 }
