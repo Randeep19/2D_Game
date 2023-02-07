@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Projectile here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ *  Game: Witch Hunt 
+ * Jess, Randeep, Randeep
+ * v 1.0
  */
 public class Projectile extends Actor
 {
@@ -12,23 +11,23 @@ public class Projectile extends Actor
      * Act - do whatever the Projectile wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Projectile()
+    public Projectile()      //by ravleen
     {
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/3;
         int myNewWidth = (int)myImage.getWidth()/3;
         myImage.scale(myNewWidth, myNewHeight);
     }
-    public void act()
+    public void act()             //by jess
     {
-        projectileMove();
+        projectileMove();        
         removeFromWorld();
     }
-    public void projectileMove()
+    public void projectileMove()    //by jess
     {
         setLocation(getX(), getY()-5);
     }
-    public void removeFromWorld()
+    public void removeFromWorld()       //by jess
     {
     if(getY() == 0)
         {

@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Creator Jessica, Randeep, Ravleen 
- * Witch Hunt
- * 1.0
+ * Game: Witch Hunt
+ * Jess, Randeep, Randeep
+ * v 1.0
  */
 public class Player extends Actor
 {
@@ -12,19 +12,19 @@ public class Player extends Actor
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Player()
+    public Player()        // by ravleen
     {
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/5;
         int myNewWidth = (int)myImage.getWidth()/5;
         myImage.scale(myNewWidth, myNewHeight);
     }
-    public void act()
+    public void act()      
     {
-        moveAround();
-        fireProjectile();
+        moveAround();         // by ravleen
+        fireProjectile();    //by jess
     }
-    public void moveAround()
+    public void moveAround()   // by ravleen
     {
         if(Greenfoot.isKeyDown("right"))
         {
@@ -35,7 +35,7 @@ public class Player extends Actor
             setLocation(getX()-5,getY());
         }
     }
-    public void fireProjectile()
+    public void fireProjectile()    //by jess
     {
         if (Greenfoot.isKeyDown("space") && canFire == true)
         {
