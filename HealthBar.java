@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class HealthBar here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ *  Game: Witch Hunt 
+ * Jess, Randeep, Randeep
+ * v 1.0
  */
 public class HealthBar extends Actor
 {
@@ -17,15 +16,16 @@ public class HealthBar extends Actor
     int healthBarHeight = 10;
     int pixelsPerhealthBarPoint = (int)healthBarWidth/health;
     
-    public HealthBar()
+    public HealthBar()            // by ravleen
     {
         update();
     }
-    public void act()
+    public void act()            // by ravleen
     {
-       update();  
+       update(); 
+       youLose();
     }
-    public void update()
+    public void update()          // by ravleen
     {
         setImage(new GreenfootImage(healthBarWidth + 2,healthBarHeight + 2));
         GreenfootImage myImage = getImage();
@@ -34,8 +34,17 @@ public class HealthBar extends Actor
         myImage.setColor(Color.GREEN);
         myImage.fillRect(1,1,health*pixelsPerhealthBarPoint, healthBarHeight);
     }
-    public void loseHealth()
+    public void loseHealth()     // by ravleen
     {
         health--;
+    }
+    public void youLose()        //by ravleen
+    {
+        if (health == 0)
+        {
+            getWorld().addObject(new YouLose(), 450, 300);
+            Greenfoot.stop();
+            Greenfoot.playSound("youlose.wav");
+        }
     }
 }

@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemy1 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ *  Game: Witch Hunt 
+ * Jess, Randeep, Randeep
+ * v 1.0
  */
 public class Enemy1 extends Enemy
 {
@@ -12,7 +11,7 @@ public class Enemy1 extends Enemy
      * Act - do whatever the Enemy1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Enemy1()
+    public Enemy1()           // by ravleen
     {
         GreenfootImage myImage = getImage();
         int myNewHeight = (int)myImage.getHeight()/5;
@@ -21,10 +20,10 @@ public class Enemy1 extends Enemy
     }
     public void act()
     {
-        moveEnemy();
+        moveEnemy();             //by randeep
         hitByProjectile();
     }
-    public void hitByProjectile()
+    public void hitByProjectile()      // officially by jess restructured and changed by ravleen.
     {
          Actor projectile =  getOneIntersectingObject(Projectile.class);
         if (projectile != null)

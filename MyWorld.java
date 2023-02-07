@@ -1,50 +1,56 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- *  Game: Witch Hunt
- * 
+ *  Game: Witch Hunt 
  * Jess, Randeep, Randeep
  * v 1.0
  */
 public class MyWorld extends World
 {
-    HealthBar healthbar = new HealthBar();
-    Counter counter = new Counter();
+    HealthBar healthbar = new HealthBar();  // by ravleen
+    Counter counter = new Counter();        //by randeep
     /**
-     * Constructor for objects of class MyWorld.
+     * 
      * 
      */
     public MyWorld()
     {    
-        super(900, 600, 1); 
+        super(900, 600, 1); //ravleen changed the frame.
         prepare();
     }
+    
     public Counter getCounter()
     {
-        return counter;
+        return counter;  //randeep added return type for counter.
     }
+    
     public HealthBar getHealthBar()
     {
-        return healthbar;
+        return healthbar;  //ravleen added return type for HealthBar.
     }
+    
     public void act()
     {
         
-        addEnemy1();
-        addEnemy2();
+        addEnemy1(); 
+        addEnemy2();     // enemy added into the world.
     } 
+    
     public void addEnemy1()
     {
         if(Greenfoot.getRandomNumber(80)<1)
         {
-        addObject(new Enemy1(), Greenfoot.getRandomNumber(900), 0);
+        addObject(new Enemy1(), Greenfoot.getRandomNumber(900), 0);  // randomly adding the enemies into the world to avoid
+                                                                    // overcrowding.
     }
     }
+    
     public void addEnemy2()
     {
         if(Greenfoot.getRandomNumber(200)<1)
         {
-        addObject(new Enemy2(), Greenfoot.getRandomNumber(900), 0);
+        addObject(new Enemy2(), Greenfoot.getRandomNumber(900), 0);   // randomly adding the enemies into the world to avoid
+                                                                    // overcrowding.
     }
     }
     /**
