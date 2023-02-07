@@ -23,9 +23,6 @@ public class Enemy extends Actor
     }
     public void removeEnemy()
     {
-        if(getY() == 599)
-        {
-            getWorld().removeObject(this);
-        }
+        
     }
 }

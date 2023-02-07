@@ -30,16 +30,7 @@ public class Projectile extends Actor
     }
     public void removeFromWorld()
     {
-         Actor enemy =  getOneIntersectingObject(Enemy.class);
-        if (enemy != null)
-        {
-            getWorld().removeObject(enemy);
-            Counter counter = (Counter) getWorld().getObjects(Counter.class).get(0);
-            counter.addScore();
-            getWorld().removeObject(this);
-        } 
-           
-        else if(getY() == 0)
+    if(getY() == 0)
         {
             getWorld().removeObject(this);
             

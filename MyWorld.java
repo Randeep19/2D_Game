@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    Counter counter = new Counter();
     HealthBar healthbar = new HealthBar();
+    Counter counter = new Counter();
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -23,13 +23,16 @@ public class MyWorld extends World
     {
         return counter;
     }
+    public HealthBar getHealthBar()
+    {
+        return healthbar;
+    }
     public void act()
     {
         
         addEnemy1();
         addEnemy2();
     } 
-    
     public void addEnemy1()
     {
         if(Greenfoot.getRandomNumber(80)<1)
@@ -43,10 +46,6 @@ public class MyWorld extends World
         {
         addObject(new Enemy2(), Greenfoot.getRandomNumber(900), 0);
     }
-    }
-    public HealthBar getHealthBar()
-    {
-        return healthbar;
     }
     /**
      * Prepare the world for the start of the program.

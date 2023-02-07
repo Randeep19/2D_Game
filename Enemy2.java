@@ -15,14 +15,36 @@ public class Enemy2 extends Enemy
     public Enemy2()
     {
         GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/5;
-        int myNewWidth = (int)myImage.getWidth()/5;
+        int myNewHeight = (int)myImage.getHeight()/6;
+        int myNewWidth = (int)myImage.getWidth()/6;
         myImage.scale(myNewWidth, myNewHeight);
     }
 
     public void act()
     {
        moveEnemy();
-       removeEnemy();
+       hitByProjectile();
+    }
+    public void hitByProjectile()
+    {
+         Actor projectile =  getOneIntersectingObject(Projectile.class);
+        if (projectile != null)
+        {
+            getWorld().removeObject(projectile);
+            World world = getWorld();
+            MyWorld myWorld = (MyWorld)world;
+            Counter counter = (Counter) getWorld().getObjects(Counter.class).get(0);
+            counter.addScore();
+            getWorld().removeObject(this);
+        } 
+           
+        else if(getY() == 599)
+        {
+            World world = getWorld();
+            MyWorld myWorld = (MyWorld)world;
+            HealthBar healthbar = myWorld.getHealthBar();
+            healthbar.loseHealth();
+            getWorld().removeObject(this);
+        }
     }
 }
