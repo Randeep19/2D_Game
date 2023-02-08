@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Game: Witch Hunt
- * Jess, Randeep, Randeep
+ * Jess, Randeep, Ravleen
  * v 1.0
  */
 public class Player extends Actor

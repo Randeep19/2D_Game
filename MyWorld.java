@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  *  Game: Witch Hunt 
- * Jess, Randeep, Randeep
+ * Jess, Randeep, Ravleen
  * v 1.0
  */
 public class MyWorld extends World
@@ -47,12 +47,13 @@ public class MyWorld extends World
     
     public void addEnemy2()
     {
-        if(Greenfoot.getRandomNumber(200)<1)
+        if(Greenfoot.getRandomNumber(100)<1)
         {
         addObject(new Enemy2(), Greenfoot.getRandomNumber(900), 0);   // randomly adding the enemies into the world to avoid
                                                                     // overcrowding.
     }
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -71,5 +72,8 @@ public class MyWorld extends World
         addObject(counter,70,35);
         HealthBar healthBar = new HealthBar();
         addObject(healthBar,824,30);
+        enemy2.setLocation(565,135);
+        enemy2.setLocation(544,36);
+        enemy1.setLocation(324,52);
     }
 }
